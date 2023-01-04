@@ -27,7 +27,7 @@ html {
 }
 #container{
     margin-top: 10px;
-    min-height: 1000px;
+    margin-bottom: 80px;
 }
 button,input{
     outline: 0;
@@ -37,7 +37,6 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: #ff6a28;
     transition: all .3s ease 0s;
 }
 .btn{

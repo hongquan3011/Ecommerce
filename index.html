@@ -8,6 +8,7 @@
   <title>E-Commerce</title>
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/grid.css">
   <link rel="stylesheet" href="./assets/css/reponsive.css">
   <link rel="shortcut icon" href="./assets/images/favicon_32x32.png" type="image/x-icon">
 
@@ -95,13 +96,14 @@
     <!-- container  -->
     <div id="container">
       <div class="grid wide">
+        <!-- banner hero header  -->
         <div class="row">
-          <div class="col c-8">
+          <div class="col l-8 m-12 c-12">
             <!-- Set up your HTML -->
-            <div class="owl-carousel owl-theme">
+            <div id="banner" class="owl-carousel owl-theme owl-loaded owl-drag">
 
               <div class="item">
-                <img src="./assets/images/slider10.jpg" alt="banner-1">
+                <img class="owl-lazy" data-src="./assets/images/slider10.jpg" data-src-retina="./assets/images/slider10.jpg" alt="banner-1">
                 <div class="banner-owl">
                   <h2 class="banner-owl__heading animate__animated animate__bounce">Top Trending</h2>
                   <h1 class="banner-owl__sub">HANDBAG</h1>
@@ -109,7 +111,7 @@
                   <a class="banner-owl__link" href="#">Discover Now</a>
                 </div>
               </div>
-              <div class="item"><img src="./assets/images/slider11.jpg" alt="GTA V">
+              <div class="item"><img class="owl-lazy" data-src="./assets/images/slider11.jpg" data-src-retina="./assets/images/slider11.jpg" alt="GTA V">
                 <div class="banner-owl">
                   <h2 class="banner-owl__heading">New Arrivals</h2>
                   <h1 class="banner-owl__sub">ZIP HOODIE</h1>
@@ -117,7 +119,7 @@
                   <a class="banner-owl__link" href="#">Discover Now</a>
                 </div>
               </div>
-              <div class="item"><img src="./assets/images/slider12.jpg" alt="Mirror Edge">
+              <div class="item"><img class="owl-lazy" data-src="./assets/images/slider12.jpg" data-src-retina="./assets/images/slider12.jpg" alt="Mirror Edge">
                 <div class="banner-owl">
                   <h2 class="banner-owl__heading">Top Trending</h2>
                   <h1 class="banner-owl__sub">CLOTHING</h1>
@@ -128,9 +130,9 @@
 
             </div>
           </div>
-          <div class="col c-4">
+          <div class="col l-4 m-6 c-12">
             <div class="row">
-              <div class="col c-12 ">
+              <div class="col l-12 m-12 c-12">
                 <div class="banner">
                   <a href="#">
                     <img class="banner__img" src="./assets/images/banner18.webp" alt="banner18">
@@ -143,7 +145,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col c-6 ">
+              <div class="col l-6 m-6 c-6">
                 <div class="banner">
                   <a href="#">
                     <img class="banner__img" src="./assets/images/banner19.webp" alt="banner18">
@@ -156,7 +158,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col c-6 ">
+              <div class="col l-6 m-6 c-6">
                 <div class="banner">
                   <a href="#">
                     <img class="banner__img" src="./assets/images/banner20.webp" alt="banner18">
@@ -172,11 +174,201 @@
             </div>
           </div>
         </div>
+                <!--end banner hero header  -->
+
+        <!-- product  -->
+        <div class="row product">
+          <div class="col l-12 m-12 c-12">
+            <h1 class="heading-title">New Arrivals</h1>
+            <p class="heading-description">Contemporary, minimal and modern designs embody the Lavish Alice handwriting
+
+            </p>
+
+            <div id="product" class="owl-carousel owl-theme"  >
+              <!-- product item -->
+              <a href="#" class="product-item">
+               <div class="product-item__thumb">
+                  <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                  <div class="product-item__thumb-sale">-15%</div>
+                  <div class="product-item__thumb-action">
+                    <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                    <div class="product-item__thumb-action__more-icon">
+                      <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                      <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                      <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                    </div>
+                  </div>
+                  <div class="product-item__thumb__quickview">
+                    <span><i class="bi bi-plus"></i> Quick View</span>
+                  </div>
+               </div> 
+               <div class="product-item__content">
+                <h3 class="product-item__name">Product title here</h3>
+                <div class="product-item__price">
+                  <span class="product-item__current-price">$50.00</span>
+                  <span class="product-item__old-price">$ 60.00</span>
+                </div>
+               </div>
+              </a>
+              <a href="#" class="product-item">
+                <div class="product-item__thumb">
+                   <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                   <div class="product-item__thumb-sale">-15%</div>
+                   <div class="product-item__thumb-action">
+                     <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                     <div class="product-item__thumb-action__more-icon">
+                       <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                       <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                       <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                     </div>
+                   </div>
+                   <div class="product-item__thumb__quickview">
+                     <span><i class="bi bi-plus"></i> Quick View</span>
+                   </div>
+                </div> 
+                <div class="product-item__content">
+                 <h3 class="product-item__name">Product title here</h3>
+                 <div class="product-item__price">
+                   <span class="product-item__current-price">$50.00</span>
+                   <span class="product-item__old-price">$ 60.00</span>
+                 </div>
+                </div>
+               </a>
+            <!-- end product item -->
+            </div>
+          </div>
+        </div>
+        <!-- end product  -->
+        <!-- banner img  -->
+        <div class="row">
+          <div class="img-banner">
+            <a href="#">
+              <img src="/assets/images/banner21.webp" alt="">
+           
+            </a> </div>
+        </div>
+        <!-- end banner img  -->
+        
+        <!-- product  -->
+        <div class="row product">
+          <div class="col l-12 m-12 c-12">
+            <h1 class="heading-title">Trending Products</h1>
+            <p class="heading-description">Contemporary, minimal and modern designs embody the Lavish Alice handwriting            </p>
+
+            <div id="product-trend" class="owl-carousel owl-theme owl-loaded owl-drag"  >
+              <!-- product item -->
+              <a href="#" class="product-item">
+               <div class="product-item__thumb">
+                  <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                  <div class="product-item__thumb-sale">-15%</div>
+                  <div class="product-item__thumb-action">
+                    <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                    <div class="product-item__thumb-action__more-icon">
+                      <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                      <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                      <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                    </div>
+                  </div>
+                  <div class="product-item__thumb__quickview">
+                    <span><i class="bi bi-plus"></i> Quick View</span>
+                  </div>
+               </div> 
+               <div class="product-item__content">
+                <h3 class="product-item__name">Product title here</h3>
+                <div class="product-item__price">
+                  <span class="product-item__current-price">$50.00</span>
+                  <span class="product-item__old-price">$ 60.00</span>
+                </div>
+               </div>
+              </a>
+              <a href="#" class="product-item">
+                <div class="product-item__thumb">
+                   <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                   <div class="product-item__thumb-sale">-15%</div>
+                   <div class="product-item__thumb-action">
+                     <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                     <div class="product-item__thumb-action__more-icon">
+                       <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                       <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                       <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                     </div>
+                   </div>
+                   <div class="product-item__thumb__quickview">
+                     <span><i class="bi bi-plus"></i> Quick View</span>
+                   </div>
+                </div> 
+                <div class="product-item__content">
+                 <h3 class="product-item__name">Product title here</h3>
+                 <div class="product-item__price">
+                   <span class="product-item__current-price">$50.00</span>
+                   <span class="product-item__old-price">$ 60.00</span>
+                 </div>
+                </div>
+               </a>
+            <!-- end product item -->
+            </div>
+          </div>
+        </div>
+        <!-- end product  -->
+      </div>
+    </div>
+      <!-- footer  -->
+      <div id="footer">
+       <div class="grid wide">
+          <div class="row">
+            <div class="col l-2 m-6 c-12">
+              <h3 class="footer-heading">
+                Information
+              </h3>
+              <ul class="footer-list">
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">About Us</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Delivery Information</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Privacy Policy</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Terms & Conditions</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Contact Us</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Returns</a></li>
+              </ul>
+            </div>
+            <div class="col l-2 m-6 c-12">
+              <h3 class="footer-heading">
+                Extra
+              </h3>
+              <ul class="footer-list">
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Brands</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Gift Certificates</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Affiliate</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Specials</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">Site Map</a></li>
+                <li class="footer-list__item"><a href="#" class="footer-list__item-link">My Account</a></li>
+              </ul>
+            </div>
+            <div class="col l-4 m-6 c-12">
+              <h3 class="footer-heading">
+                Contact Us
+              </h3>
+              <p class="footer-text">Address: 6688 Princess Road, London, Greater London BAS 23JK, UK<br>Phone: (+012) 800 456 789 - 987<br>Email: Contact@plazathemes.com</p>
+             <ul class="footer-list list-icon">
+              <li class="footer-list-icon"><a href="#"><i class="bi bi-twitter"></i></a></li>
+              <li class="footer-list-icon"><a href="#"><i class="bi bi-google"></i></i></a></li>
+              <li class="footer-list-icon"><a href="#"><i class="bi bi-facebook"></i></a></li>
+              <li class="footer-list-icon"><a href="#"><i class="bi bi-youtube"></i></a></li>
+             </ul>
+            </div>
+            <div class="col l-4 m-6 c-12">
+              <h3 class="footer-heading">
+                Join Our Newsletter Now
+              </h3>
+              <p class="footer-text">Exceptional quality. Ethical factories. Sign up to enjoy free U.S. shipping and returns on your first order.              </p>
+             <form class="footer-form" method="post">
+              <input class="footer-form__input" type="text" placeholder="Your mail address">
+              <input class="footer-form__button" type="submit" value="Subscribe">
+             </form>
+            </div>
+          </div>
+       </div>
 
       </div>
-      <!-- footer  -->
-      <div id="footer"></div>
-    </div>
+    
 
 
 
@@ -184,6 +376,7 @@
 
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/node_modules/owl.carousel/docs/assets/vendors/jquery.mousewheel.min.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 
