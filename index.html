@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Commerce</title>
+  <title>MooBoo Shop</title>
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/grid.css">
@@ -29,7 +29,7 @@
     <!-- header  -->
     <div id="header">
       <div class="grid">
-        <div id="top-bar">
+        <div class="top-bar">
           <div class="top-bar__heading">
             <div class="top-bar__heading-title">
               Free Delivery:<span> Take advantage of our time to save event</span>
@@ -81,8 +81,9 @@
           </div>
         </div>
         <nav id="bottom-bar" class="fixed">
+          <div class="bottom-bar__mobile"><span>Menu</span><i class="bi bi-list"></i> </div>
           <ul class="bottom-bar__list">
-            <li class="bottom-bar__list-item"><a href="/" class="bottom-bar__list-item__link">Home</a></li>
+            <li class="bottom-bar__list-item"><a href="/" class="bottom-bar__list-item__link"><span>Home</span> </a></li>
             <li class="bottom-bar__list-item"><a href="/shop" class="bottom-bar__list-item__link">Shop</a></li>
             <li class="bottom-bar__list-item"><a href="/products" class="bottom-bar__list-item__link">Products</a></li>
             <li class="bottom-bar__list-item"><a href="/blog" class="bottom-bar__list-item__link">Blog</a></li>
@@ -107,7 +108,7 @@
                 <div class="banner-owl">
                   <h2 class="banner-owl__heading animate__animated animate__bounce">Top Trending</h2>
                   <h1 class="banner-owl__sub">HANDBAG</h1>
-                  <h3 class="banner-owl__description">Lorem ipsum dolor amet, consectetur adipisicing <br/>  elit. Vel similique perspiciatis, tempore unde</h3>
+                  <h3 class="banner-owl__description hide-on-mobile">Lorem ipsum dolor amet, consectetur adipisicing <br/>  elit. Vel similique perspiciatis, tempore unde</h3>
                   <a class="banner-owl__link" href="#">Discover Now</a>
                 </div>
               </div>
@@ -115,7 +116,7 @@
                 <div class="banner-owl">
                   <h2 class="banner-owl__heading">New Arrivals</h2>
                   <h1 class="banner-owl__sub">ZIP HOODIE</h1>
-                  <h3 class="banner-owl__description">Lorem ipsum dolor amet, consectetur adipisicing <br/>  elit. Vel similique perspiciatis, tempore unde</h3>
+                  <h3 class="banner-owl__description hide-on-mobile">Lorem ipsum dolor amet, consectetur adipisicing <br/>  elit. Vel similique perspiciatis, tempore unde</h3>
                   <a class="banner-owl__link" href="#">Discover Now</a>
                 </div>
               </div>
@@ -123,14 +124,14 @@
                 <div class="banner-owl">
                   <h2 class="banner-owl__heading">Top Trending</h2>
                   <h1 class="banner-owl__sub">CLOTHING</h1>
-                  <h3 class="banner-owl__description">Lorem ipsum dolor amet, consectetur adipisicing <br/>  elit. Vel similique perspiciatis, tempore unde</h3>
+                  <h3 class="banner-owl__description hide-on-mobile">Lorem ipsum dolor amet, consectetur adipisicing <br/>  elit. Vel similique perspiciatis, tempore unde</h3>
                   <a class="banner-owl__link" href="#">Discover Now</a>
                 </div>
               </div>
 
             </div>
           </div>
-          <div class="col l-4 m-6 c-12">
+          <div class="col l-4 m-12 c-12">
             <div class="row">
               <div class="col l-12 m-12 c-12">
                 <div class="banner">
@@ -184,57 +185,183 @@
 
             </p>
 
-            <div id="product" class="owl-carousel owl-theme"  >
-              <!-- product item -->
-              <a href="#" class="product-item">
-               <div class="product-item__thumb">
-                  <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
-                  <div class="product-item__thumb-sale">-15%</div>
-                  <div class="product-item__thumb-action">
-                    <i class="product-item__thumb-action__icon bi bi-plus"></i>
-                    <div class="product-item__thumb-action__more-icon">
-                      <i class="product-item__thumb-action__icon bi bi-handbag"></i>
-                      <i class="product-item__thumb-action__icon bi bi-heart"></i>
-                      <i class="product-item__thumb-action__icon bi bi-sliders"></i>
-                    </div>
-                  </div>
-                  <div class="product-item__thumb__quickview">
-                    <span><i class="bi bi-plus"></i> Quick View</span>
-                  </div>
-               </div> 
-               <div class="product-item__content">
-                <h3 class="product-item__name">Product title here</h3>
-                <div class="product-item__price">
-                  <span class="product-item__current-price">$50.00</span>
-                  <span class="product-item__old-price">$ 60.00</span>
+            <div class="tab-product">
+              <div class="tabs">
+                <div class="tab-item active">
+                  Women's Collection
                 </div>
-               </div>
-              </a>
-              <a href="#" class="product-item">
-                <div class="product-item__thumb">
-                   <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
-                   <div class="product-item__thumb-sale">-15%</div>
-                   <div class="product-item__thumb-action">
-                     <i class="product-item__thumb-action__icon bi bi-plus"></i>
-                     <div class="product-item__thumb-action__more-icon">
-                       <i class="product-item__thumb-action__icon bi bi-handbag"></i>
-                       <i class="product-item__thumb-action__icon bi bi-heart"></i>
-                       <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                <div class="tab-item ">
+                  Men's Collection
+                </div>
+                <div class="tab-item ">
+                  Featured Collection
+                </div>
+
+              </div>
+              <div class="tab-content">
+                <div class="tab-pane active">
+                  <div id="women-product" class="owl-carousel owl-theme"  >
+                    <!-- product item -->
+                    <a href="#" class="product-item">
+                     <div class="product-item__thumb">
+                        <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                        <div class="product-item__thumb-sale">-15%</div>
+                        <div class="product-item__thumb-action">
+                          <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                          <div class="product-item__thumb-action__more-icon">
+                            <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                            <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                            <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                          </div>
+                        </div>
+                        <div class="product-item__thumb__quickview">
+                          <span><i class="bi bi-plus"></i> Quick View</span>
+                        </div>
+                     </div> 
+                     <div class="product-item__content">
+                      <h3 class="product-item__name">Product title here</h3>
+                      <div class="product-item__price">
+                        <span class="product-item__current-price">$50.00</span>
+                        <span class="product-item__old-price">$ 60.00</span>
+                      </div>
                      </div>
-                   </div>
-                   <div class="product-item__thumb__quickview">
-                     <span><i class="bi bi-plus"></i> Quick View</span>
-                   </div>
-                </div> 
-                <div class="product-item__content">
-                 <h3 class="product-item__name">Product title here</h3>
-                 <div class="product-item__price">
-                   <span class="product-item__current-price">$50.00</span>
-                   <span class="product-item__old-price">$ 60.00</span>
-                 </div>
+                    </a>
+                    <a href="#" class="product-item">
+                      <div class="product-item__thumb">
+                         <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                         <div class="product-item__thumb-sale">-15%</div>
+                         <div class="product-item__thumb-action">
+                           <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                           <div class="product-item__thumb-action__more-icon">
+                             <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                             <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                             <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                           </div>
+                         </div>
+                         <div class="product-item__thumb__quickview">
+                           <span><i class="bi bi-plus"></i> Quick View</span>
+                         </div>
+                      </div> 
+                      <div class="product-item__content">
+                       <h3 class="product-item__name">Product title here</h3>
+                       <div class="product-item__price">
+                         <span class="product-item__current-price">$50.00</span>
+                         <span class="product-item__old-price">$ 60.00</span>
+                       </div>
+                      </div>
+                     </a>
+                  <!-- end product item -->
+                  </div>
                 </div>
-               </a>
-            <!-- end product item -->
+                <div class="tab-pane">
+                  <div id="men-product" class="owl-carousel owl-theme"  >
+                    <!-- product item -->
+                    <a href="#" class="product-item">
+                     <div class="product-item__thumb">
+                        <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                        <div class="product-item__thumb-sale">-15%</div>
+                        <div class="product-item__thumb-action">
+                          <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                          <div class="product-item__thumb-action__more-icon">
+                            <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                            <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                            <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                          </div>
+                        </div>
+                        <div class="product-item__thumb__quickview">
+                          <span><i class="bi bi-plus"></i> Quick View</span>
+                        </div>
+                     </div> 
+                     <div class="product-item__content">
+                      <h3 class="product-item__name">Product title here</h3>
+                      <div class="product-item__price">
+                        <span class="product-item__current-price">$50.00</span>
+                        <span class="product-item__old-price">$ 60.00</span>
+                      </div>
+                     </div>
+                    </a>
+                    <a href="#" class="product-item">
+                      <div class="product-item__thumb">
+                         <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                         <div class="product-item__thumb-sale">-15%</div>
+                         <div class="product-item__thumb-action">
+                           <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                           <div class="product-item__thumb-action__more-icon">
+                             <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                             <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                             <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                           </div>
+                         </div>
+                         <div class="product-item__thumb__quickview">
+                           <span><i class="bi bi-plus"></i> Quick View</span>
+                         </div>
+                      </div> 
+                      <div class="product-item__content">
+                       <h3 class="product-item__name">Product title here</h3>
+                       <div class="product-item__price">
+                         <span class="product-item__current-price">$50.00</span>
+                         <span class="product-item__old-price">$ 60.00</span>
+                       </div>
+                      </div>
+                     </a>
+                  <!-- end product item -->
+                  </div>
+                </div>
+                <div class="tab-pane">
+                  <div id="featured-product" class="owl-carousel owl-theme"  >
+                    <!-- product item -->
+                    <a href="#" class="product-item">
+                     <div class="product-item__thumb">
+                        <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                        <div class="product-item__thumb-sale">-15%</div>
+                        <div class="product-item__thumb-action">
+                          <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                          <div class="product-item__thumb-action__more-icon">
+                            <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                            <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                            <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                          </div>
+                        </div>
+                        <div class="product-item__thumb__quickview">
+                          <span><i class="bi bi-plus"></i> Quick View</span>
+                        </div>
+                     </div> 
+                     <div class="product-item__content">
+                      <h3 class="product-item__name">Product title here</h3>
+                      <div class="product-item__price">
+                        <span class="product-item__current-price">$50.00</span>
+                        <span class="product-item__old-price">$ 60.00</span>
+                      </div>
+                     </div>
+                    </a>
+                    <a href="#" class="product-item">
+                      <div class="product-item__thumb">
+                         <img class="product-item__thumb-img" src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292" alt="anh1">
+                         <div class="product-item__thumb-sale">-15%</div>
+                         <div class="product-item__thumb-action">
+                           <i class="product-item__thumb-action__icon bi bi-plus"></i>
+                           <div class="product-item__thumb-action__more-icon">
+                             <i class="product-item__thumb-action__icon bi bi-handbag"></i>
+                             <i class="product-item__thumb-action__icon bi bi-heart"></i>
+                             <i class="product-item__thumb-action__icon bi bi-sliders"></i>
+                           </div>
+                         </div>
+                         <div class="product-item__thumb__quickview">
+                           <span><i class="bi bi-plus"></i> Quick View</span>
+                         </div>
+                      </div> 
+                      <div class="product-item__content">
+                       <h3 class="product-item__name">Product title here</h3>
+                       <div class="product-item__price">
+                         <span class="product-item__current-price">$50.00</span>
+                         <span class="product-item__old-price">$ 60.00</span>
+                       </div>
+                      </div>
+                     </a>
+                  <!-- end product item -->
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -316,7 +443,7 @@
       <div id="footer">
        <div class="grid wide">
           <div class="row">
-            <div class="col l-2 m-6 c-12">
+            <div class="col l-2 m-6 c-6">
               <h3 class="footer-heading">
                 Information
               </h3>
@@ -329,7 +456,7 @@
                 <li class="footer-list__item"><a href="#" class="footer-list__item-link">Returns</a></li>
               </ul>
             </div>
-            <div class="col l-2 m-6 c-12">
+            <div class="col l-2 m-6 c-6">
               <h3 class="footer-heading">
                 Extra
               </h3>

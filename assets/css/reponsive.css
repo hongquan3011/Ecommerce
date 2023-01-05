@@ -20,7 +20,12 @@
         .hide-on-tablet{
             display: none;
         }
-    
+        #banner{
+            margin-bottom: 10px;
+        }
+        .banner{
+            margin:2px 0;
+        }
        
     }
     @media(max-width:739px){
@@ -32,5 +37,98 @@
         .hide-on-mobile{
             display: none;
         }
-       
+        #container,#footer {
+            margin-top: 10px;
+            margin-bottom: 80px;
+            padding: 0 15px;
+        }
+        .top-bar{
+            height: auto;
+            flex-direction: column;
+        }
+        .top-bar__heading, .top-bar__actions {
+            flex-wrap: wrap;
+        }
+        .top-bar__heading-title{
+            padding: 0;
+        }
+        .top-bar__heading-title:nth-child(1):before{
+            display: none;
+        }
+        #main-bar {
+            padding: 20px 20px;
+            border-bottom: 0;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .main-bar__search,.main-bar__logo{
+            order: 1;
+            margin-bottom: 15px;
+        }
+        #bottom-bar {
+            margin-bottom: 60px;
+        }
+        #bottom-bar.fixed{
+            position: relative;
+        }
+        .bottom-bar__mobile {
+            display: flex;
+            background: #fff;
+        }
+        .bottom-bar__list {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 90%;
+            position: absolute;
+            margin-top: 52px;
+            z-index: 2;
+            background: #fff;
+        }
+        .bottom-bar__list-item {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+        }
+        .bottom-bar__list-item__link{
+            padding: 15px 15px;
+            text-transform: uppercase;
+        }
+        .bottom-bar__list{
+            display: none;
+        }
+        #banner.owl-carousel .item img {
+            height: auto;
+        }
+        .banner-owl {
+            left: 0;
+            width: 100%;
+            top: auto;
+            bottom: 30px;
+            padding-left: 0;
+            text-align: center;
+        }
+        .banner-owl__sub {
+            font-size: 3rem;
+            line-height: 3rem;
+            margin-bottom: 10px;
+        }
+        .banner-owl__link{
+            margin: 0;
+        }
+        #banner{
+            margin-bottom: 10px;
+        }
+        .banner{
+            margin:2px 0;
+        }
+        .img-banner {
+            margin: 0px;
+           
+        }
+        #footer .row {
+            padding: 15px 0;
+        }
+        .footer-heading{
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
         }
