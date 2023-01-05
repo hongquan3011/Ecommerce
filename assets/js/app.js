@@ -5,6 +5,10 @@ const menuMyaccount = $$(".top-bar__actions-account__menu");
 const menuMyaccountBtn = $$(".top-bar__actions-account");
 const menuMobileBtn = $$(".bottom-bar__mobile");
 const menuMobile = $$('.bottom-bar__list')
+const filterBtn = $$('.side-bar__filter')
+const filterMobile = $$('.side-bar')
+const valueRange = $$('#side-bar__price-range');
+const valueLabel = $$('.side-bar__value-range');
 //open menu
 function OpenMenu() {
   menuMyaccount.classList.toggle("open");
@@ -25,7 +29,9 @@ window.onscroll = () => {
 menuMobileBtn.onclick = () =>{
   menuMobile.classList.toggle('open')
 }
-
+filterBtn.onclick = () =>{
+  filterMobile.classList.toggle('open')
+}
 //tab product
 const tabs = $$$(".tab-item");
 const panes = $$$(".tab-pane");
@@ -46,100 +52,10 @@ tabs.forEach((tab, index) => {
   };
 });
 
-//slide ảnh
-$("#banner").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  lazyLoad: true,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  autoplayHoverPause: false,
-  items: 1,
-  dots: true,
-  dotsEach: true,
-});
+//value range
+function CountValueRange (){
+  valueLabel.innerHTML = '$ ' + valueRange.value;
+}
 
-$("#women-product").owlCarousel({
-  loop: true,
-  margin: 30,
-  // nav: true,
-  // navText: [
-  //   "<div class='nav-button owl-prev'>‹</div>",
-  //   "<div class='nav-button owl-next'>›</div>",
-  // ],
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
-});
+// pagination page 
 
-$("#men-product").owlCarousel({
-  loop: true,
-  margin: 30,
-  // nav: true,
-  // navText: [
-  //   "<div class='nav-button owl-prev'>‹</div>",
-  //   "<div class='nav-button owl-next'>›</div>",
-  // ],
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
-});
-
-$("#featured-product").owlCarousel({
-  loop: true,
-  margin: 30,
-  // nav: true,
-  // navText: [
-  //   "<div class='nav-button owl-prev'>‹</div>",
-  //   "<div class='nav-button owl-next'>›</div>",
-  // ],
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
-});
-
-$("#product-trend").owlCarousel({
-  loop: true,
-  margin: 30,
-  // nav: true,
-  // navText: [
-  //   "<div class='nav-button owl-prev'>‹</div>",
-  //   "<div class='nav-button owl-next'>›</div>",
-  // ],
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
-});

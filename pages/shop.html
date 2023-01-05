@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooBoo Shop</title>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/grid.css">
+    <link rel="stylesheet" href="/assets/css/reponsive.css">
+    <link rel="shortcut icon" href="/assets/images/favicon_32x32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <!-- header  -->
+        <div id="header">
+            <div class="grid">
+                <div class="top-bar">
+                    <div class="top-bar__heading">
+                        <div class="top-bar__heading-title">
+                            Free Delivery:<span> Take advantage of our time to save event</span>
+                        </div>
+                        <div class="top-bar__heading-title">
+                            Free Returns * <span>Satisfaction guaranteed</span>
+                        </div>
+                    </div>
+                    <div class="top-bar__actions">
+                        <div class="top-bar__actions-account" onclick="OpenMenu()">
+                            My Account <i class="top-bar__actions-account-icon bi bi-chevron-compact-down"></i>
+                            <ul class="top-bar__actions-account__menu" onmouseleave="CloseMenu()">
+                                <li class="top-bar__actions-account__menu-item"><a href="#">My Account</a></li>
+                                <li class="top-bar__actions-account__menu-item"><a href="#">My Wishlist</a></li>
+                                <li class="top-bar__actions-account__menu-item"><a href="#">Login</a></li>
+                                <li class="top-bar__actions-account__menu-item"><a href="#">Register</a></li>
+                            </ul>
+                        </div>
+                        <div class="top-bar__actions-change__currency">
+                            USD <i class="top-bar__actions-account-icon bi bi-chevron-compact-down"></i>
+                            <ul class="top-bar__actions-account__menu">
+                                <li class="top-bar__actions-account__menu-item"><a href="#">VND</a></li>
+                                <li class="top-bar__actions-account__menu-item"><a href="#">USD</a></li>
+                                <li class="top-bar__actions-account__menu-item"><a href="#">EURO</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="main-bar">
+                    <form action="/" role="search" method="get" class="main-bar__search">
+                        <input class="main-bar__search-input" type="search" placeholder="Search entire store here...">
+                        <button class="main-bar__search-button"><i class="bi bi-search"></i></button>
+                    </form>
+                    <div class="main-bar__logo">
+                        <a href="/"><img class="main-bar__logo-img" src="/assets/images/logo_150x.png" alt="Logo"></a>
+                    </div>
+                    <div class="main-bar__actions">
+                        <div class="main-bar__actions-account">
+                            <a href="#" class="main-bar__actions-account__login">Login</a>
+                            <span>/</span>
+                            <a href="#" class="main-bar__actions-account__register">Register</a>
+                        </div>
+                        <div class="main-bar__actions-cart">
+                            <i class="bi bi-handbag"></i>
+                            <span class="main-bar__actions-cart__title">
+                                0 Item(S)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <nav id="bottom-bar" class="fixed">
+                    <div class="bottom-bar__mobile"><span>Menu</span><i class="bi bi-list"></i> </div>
+                    <ul class="bottom-bar__list">
+                        <li class="bottom-bar__list-item"><a href="/"
+                                class="bottom-bar__list-item__link"><span>Home</span> </a></li>
+                        <li class="bottom-bar__list-item"><a href="/shop" class="bottom-bar__list-item__link">Shop</a>
+                        </li>
+                        <li class="bottom-bar__list-item"><a href="/products"
+                                class="bottom-bar__list-item__link">Products</a></li>
+                        <li class="bottom-bar__list-item"><a href="/blog" class="bottom-bar__list-item__link">Blog</a>
+                        </li>
+                        <li class="bottom-bar__list-item"><a href="/about-us" class="bottom-bar__list-item__link">About
+                                Us</a></li>
+                        <li class="bottom-bar__list-item"><a href="/contact-us"
+                                class="bottom-bar__list-item__link">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- container  -->
+        <div id="container">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-12 m-12 c-12">
+                        <nav aria-label="Page breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item" aria-current="page">Home</li>
+                                <li class="moo_separator">/</li>
+                                <li class="breadcrumb-item active">Shop</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col l-12 m-12 c-12">
+                        <div class="row">
+                            <div class="col l-3 m-12 c-12">
+                                <h1 class="shop-title mobile">Shop</h1>
+                                <div class="side-bar__filter"><span>Filter</span> <i class="bi bi-funnel"></i></div>
+                                <aside class="side-bar">
+                                    <div class="side-bar__availability side-bar__input">
+                                        <h2 class="side-bar__heading">
+                                            Availability
+                                        </h2>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" name="" value="1" id="Filter-availability-1">
+                                                <label for="Filter-availability-1">In stock (29)</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" value="0" id="Filter-availability-2">
+                                                <label for="Filter-availability-2">Out of stock (19)</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="side-bar__price">
+                                        <h2 class="side-bar__heading">
+                                            Price
+                                        </h2>
+                                        <label class="side-bar__label"><span class="side-bar__value-default">$ 0</span>
+                                            <span class="side-bar__value-range">$ 100</span></label>
+                                        <input type="range" name="side-bar__price-range" value="100"
+                                            id="side-bar__price-range" min="0" max="100" step="1"
+                                            oninput="CountValueRange()">
+                                    </div>
+                                    <div class="side-bar__producttype side-bar__input">
+                                        <h2 class="side-bar__heading">
+                                            Product Types
+                                        </h2>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" name="" value="1" id="Filter-availability-3">
+                                                <label for="Filter-availability-3">In stock (29)</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" value="0" id="Filter-availability-4">
+                                                <label for="Filter-availability-4">Out of stock (19)</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </aside>
+                            </div>
+                            <!-- shop  --> 
+                            <div class="col l-9 m-12 c-12">
+                                <div class="row">
+                                    <div class="col l-12 m-12 c-12">
+                                        <h1 class="shop-title hide-on-mobile-tablet">Shop</h1>
+                                    </div>
+                                    <div class="col l-12 m-12 c-12">
+                                        <!-- toolbar  -->
+                                        <div class="shop-toolbar">
+                                            <div class="tabs shop-toolbar_list">
+                                                <button data-role="grid_3" type="button"
+                                                    class="tab-item shop-toolbar_btn btn-grid-3 active"
+                                                    data-toggle="tooltip" title=""></button>
+                                                <button data-role="grid_4" type="button"
+                                                    class="tab-item shop-toolbar_btn btn-grid-4 hide-on-mobile-tablet" data-toggle="tooltip"
+                                                    title=""></button>
+                                                <button data-role="grid_5" type="button"
+                                                    class="tab-item shop-toolbar_btn btn-grid-5 hide-on-mobile-tablet" data-toggle="tooltip"
+                                                    title=""></button>
+                                                <button data-role="grid_list" type="button"
+                                                    class="tab-item shop-toolbar_btn btn-grid-list"
+                                                    data-toggle="tooltip" title=""></button>
+
+                                            </div>
+                                            <div class="shop-toolbar__sort">
+                                                <h2 class="shop-toolbar__sort-heading">Sort by</h2>
+                                                <select name="shop-toolbar__sort" id="shop-toolbar__sort">
+                                                    <option value="">Featured</option>
+                                                    <option value="">Best Selling</option>
+                                                    <option value="">Alphabetically, A-Z</option>
+                                                    <option value="">Alphabetically, Z-A</option>
+                                                    <option value="">Price, low to high</option>
+                                                    <option value="">Price, high to low</option>
+                                                    <option value="">Date, new to old</option>
+                                                    <option value="">Date, old to new</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="shop-toolbar_amount">
+                                                <p>Showing 1-0 of 0 result </p>
+                                            </div>
+                                        </div>
+                                        <!-- end toolbar  -->
+                                        <!-- product  -->
+                                        <div class="tab-shop">
+                                            <div class="tab-content">
+                                                <div class="tab-pane active grid-3">
+                                                    <div class="shop row">
+                                                        <!-- product item -->
+
+                                                        <div class="col l-4 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-4 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-4 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-4 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                        <!-- end product item -->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane grid-4">
+                                                    <div class="shop row">
+                                                        <!-- product item -->
+
+                                                        <div class="col l-3 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-3 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-3 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-3 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-3 m-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                        <!-- end product item -->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane grid-5">
+                                                    <div class="shop row">
+                                                        <!-- product item -->
+
+                                                        <div class="col l-2-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-2-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-2-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-2-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div> 
+                                                        <div class="col l-2-4">
+                                                            <a href="#" class="product-item">
+                                                                <div class="product-item__thumb">
+                                                                    <img class="product-item__thumb-img"
+                                                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                        alt="anh1">
+                                                                    <div class="product-item__thumb-sale">-15%</div>
+                                                                    <div class="product-item__thumb-action">
+                                                                        <i
+                                                                            class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                        <div class="product-item__thumb-action__more-icon">
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                            <i
+                                                                                class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-item__thumb__quickview">
+                                                                        <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-item__content">
+                                                                    <h3 class="product-item__name">Product title here</h3>
+                                                                    <div class="product-item__price">
+                                                                        <span
+                                                                            class="product-item__current-price">$50.00</span>
+                                                                        <span class="product-item__old-price">$ 60.00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                        <!-- end product item -->
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane grid-list">
+                                                    <div class="shop row">
+                                                        <!-- product item -->
+
+                                                        <div class="col l-12 m-12 c-12">
+                                                            <a href="#" class="product-item">
+                                                                <div class="row">
+                                                                   <div class="col l-4 m-4 c-12">
+                                                                        <div class="product-item__thumb">
+                                                                            <img class="product-item__thumb-img"
+                                                                                src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                                alt="anh1">
+                                                                            <div class="product-item__thumb-sale">-15%</div>
+                                                                            <div class="product-item__thumb-action">
+                                                                                <i
+                                                                                    class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                                <div class="product-item__thumb-action__more-icon">
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="product-item__thumb__quickview">
+                                                                                <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                            </div>
+                                                                        </div>
+                                                                   </div>
+                                                                    <div class="col l-8 m-8 c-12">
+                                                                        <div class="product-item__content">
+                                                                            <h3 class="product-item__name">Product title here</h3>
+                                                                            <ul class="product-item__ratting">
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+
+                                                                                <span class="spr-badge-caption">No reviews</span>
+                                                                            </ul>
+                                                                           
+                                                                            <div class="product-item__price">
+                                                                                <span
+                                                                                    class="product-item__current-price">$50.00</span>
+                                                                                <span class="product-item__old-price">$ 60.00</span>
+                                                                            </div>
+                                                                            <div class="product-item__description">
+                                                                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-12 c-12">
+                                                            <a href="#" class="product-item">
+                                                                <div class="row">
+                                                                   <div class="col l-4 m-4 c-12">
+                                                                        <div class="product-item__thumb">
+                                                                            <img class="product-item__thumb-img"
+                                                                                src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                                alt="anh1">
+                                                                            <div class="product-item__thumb-sale">-15%</div>
+                                                                            <div class="product-item__thumb-action">
+                                                                                <i
+                                                                                    class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                                <div class="product-item__thumb-action__more-icon">
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="product-item__thumb__quickview">
+                                                                                <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                            </div>
+                                                                        </div>
+                                                                   </div>
+                                                                    <div class="col l-8 m-8 c-12">
+                                                                        <div class="product-item__content">
+                                                                            <h3 class="product-item__name">Product title here</h3>
+                                                                            <ul class="product-item__ratting">
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+
+                                                                                <span class="spr-badge-caption">No reviews</span>
+                                                                            </ul>
+                                                                           
+                                                                            <div class="product-item__price">
+                                                                                <span
+                                                                                    class="product-item__current-price">$50.00</span>
+                                                                                <span class="product-item__old-price">$ 60.00</span>
+                                                                            </div>
+                                                                            <div class="product-item__description">
+                                                                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col l-12 m-12 c-12">
+                                                            <a href="#" class="product-item">
+                                                                <div class="row">
+                                                                   <div class="col l-4 m-4 c-12">
+                                                                        <div class="product-item__thumb">
+                                                                            <img class="product-item__thumb-img"
+                                                                                src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/22_7fc6294e-154c-4b54-85d6-d3f28f00f4e3_large.jpg?v=1546408292"
+                                                                                alt="anh1">
+                                                                            <div class="product-item__thumb-sale">-15%</div>
+                                                                            <div class="product-item__thumb-action">
+                                                                                <i
+                                                                                    class="product-item__thumb-action__icon bi bi-plus"></i>
+                                                                                <div class="product-item__thumb-action__more-icon">
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-handbag"></i>
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-heart"></i>
+                                                                                    <i
+                                                                                        class="product-item__thumb-action__icon bi bi-sliders"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="product-item__thumb__quickview">
+                                                                                <span><i class="bi bi-plus"></i> Quick View</span>
+                                                                            </div>
+                                                                        </div>
+                                                                   </div>
+                                                                    <div class="col l-8 m-8 c-12">
+                                                                        <div class="product-item__content">
+                                                                            <h3 class="product-item__name">Product title here</h3>
+                                                                            <ul class="product-item__ratting">
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+                                                                                <li><i class="bi bi-star"></i></li>
+
+                                                                                <span class="spr-badge-caption">No reviews</span>
+                                                                            </ul>
+                                                                           
+                                                                            <div class="product-item__price">
+                                                                                <span
+                                                                                    class="product-item__current-price">$50.00</span>
+                                                                                <span class="product-item__old-price">$ 60.00</span>
+                                                                            </div>
+                                                                            <div class="product-item__description">
+                                                                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                       
+                                                        
+
+                                                        <!-- end product item -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end product  -->
+                                        <div class="shop-toolbar shop-pagination">
+                                            <ul class="shop-pagination__list">
+                                                <li class="disabled"><a href="#">Prev</a></li>
+                                                <li class="current"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">Next</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer  -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-6 c-6">
+                        <h3 class="footer-heading">
+                            Information
+                        </h3>
+                        <ul class="footer-list">
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">About Us</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Delivery
+                                    Information</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Privacy Policy</a>
+                            </li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Terms &
+                                    Conditions</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Contact Us</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Returns</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-2 m-6 c-6">
+                        <h3 class="footer-heading">
+                            Extra
+                        </h3>
+                        <ul class="footer-list">
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Brands</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Gift
+                                    Certificates</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Affiliate</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Specials</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">Site Map</a></li>
+                            <li class="footer-list__item"><a href="#" class="footer-list__item-link">My Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <h3 class="footer-heading">
+                            Contact Us
+                        </h3>
+                        <p class="footer-text">Address: 6688 Princess Road, London, Greater London BAS 23JK,
+                            UK<br>Phone: (+012) 800 456 789 - 987<br>Email: Contact@plazathemes.com</p>
+                        <ul class="footer-list list-icon">
+                            <li class="footer-list-icon"><a href="#"><i class="bi bi-twitter"></i></a></li>
+                            <li class="footer-list-icon"><a href="#"><i class="bi bi-google"></i></i></a></li>
+                            <li class="footer-list-icon"><a href="#"><i class="bi bi-facebook"></i></a></li>
+                            <li class="footer-list-icon"><a href="#"><i class="bi bi-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <h3 class="footer-heading">
+                            Join Our Newsletter Now
+                        </h3>
+                        <p class="footer-text">Exceptional quality. Ethical factories. Sign up to enjoy free U.S.
+                            shipping and returns on your first order. </p>
+                        <form class="footer-form" method="post">
+                            <input class="footer-form__input" type="text" placeholder="Your mail address">
+                            <input class="footer-form__button" type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <script src="/node_modules/jquery/dist/jquery.js"></script>
+        <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="/node_modules/owl.carousel/docs/assets/vendors/jquery.mousewheel.min.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <script src="/assets/js/owl-carousel.js"></script>
+</body>
+
+</html>
