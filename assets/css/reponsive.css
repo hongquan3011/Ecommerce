@@ -50,6 +50,10 @@
             box-shadow: 0 0 20px rgb(233, 232, 232);
             display: none;
         }
+       .mt-4{
+        margin-top: 40px;
+       }
+       
        
     }
     @media(max-width:739px){
@@ -187,4 +191,19 @@
             margin-top: 25px;
             margin-bottom: 10px;
         }
+        .blog-post__item {
+           
+            flex-direction: column;
+        }
+        .blog-post__item-thumb,.blog-post__item-content {
+            width: 100%;
+           
+        }
+        .blog-post__item-content {
+            margin:20px 5px;
+        
+        }
+        .mt-4{
+            margin-top: 40px;
+           }
         }

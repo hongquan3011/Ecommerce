@@ -29,21 +29,13 @@ window.onscroll = () => {
 menuMobileBtn.onclick = () =>{
   menuMobile.classList.toggle('open')
 }
-filterBtn.onclick = () =>{
-  filterMobile.classList.toggle('open')
-}
 //tab product
 const tabs = $$$(".tab-item");
 const panes = $$$(".tab-pane");
-
 const tabActive = $$(".tab-item.active");
-
-// SonDN fixed - Active size wrong size on first load.
-// Original post: https://www.facebook.com/groups/649972919142215/?multi_permalinks=1175881616551340
 
 tabs.forEach((tab, index) => {
   const pane = panes[index];
-
   tab.onclick = function () {
     $$(".tab-item.active").classList.remove("active");
     $$(".tab-pane.active").classList.remove("active");
@@ -56,6 +48,26 @@ tabs.forEach((tab, index) => {
 function CountValueRange (){
   valueLabel.innerHTML = '$ ' + valueRange.value;
 }
-
 // pagination page 
 
+// filterBtn.onclick = () =>{
+//   filterMobile.classList.toggle('open')
+// }
+
+// accordion
+var acc = document.getElementsByClassName("faq__accordion-button");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+     
+    } else {
+  
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
