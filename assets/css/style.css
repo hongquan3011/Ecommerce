@@ -586,7 +586,7 @@
   height: 500px;
   object-fit: cover;
 }
-.product-item__thumb-img{
+.product__thumb .product-item__thumb-img{
   width: 100%;
   height: 120px;
   object-fit: cover;
