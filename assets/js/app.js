@@ -71,3 +71,42 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+// gallery thumb 
+function choiceImg(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  expandImg.src = imgs.src;
+   expandImg.alt = imgs.src;
+}
+
+
+ //rating star
+function startRating(item){
+  var count = 0;
+	count=item.id[0];
+	sessionStorage.star = count;
+	for(var i=0;i<5;i++){
+		if(i < count){
+			document.getElementById((i+1)).style.color="yellow";
+      document.getElementById((i+1)).classList.remove("bi-star");
+      document.getElementById((i+1)).classList.add("bi-star-fill");
+      
+		}
+		else{
+			document.getElementById((i+1)).style.color="black";
+      document.getElementById((i+1)).classList.remove("bi-star-fill");
+      document.getElementById((i+1)).classList.add("bi-star");
+		}
+	}
+}
+// count characters length
+function CountCharacters(character){
+const characterLength = $$(".characters")
+ var char = 1500 - character.length;
+characterLength.innerHTML = '('+char+ ')'
+}
+
+const toggleComment = $$(".product-reviews__summary-comment")
+const toggleProductReview = $$(".product-reviews__content-form")
+toggleComment.onclick =() =>{
+  toggleProductReview.classList.toggle("open")
+}

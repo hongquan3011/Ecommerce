@@ -203,6 +203,26 @@
             margin:20px 5px;
         
         }
+        .single-post__inner{
+           display: block;
+        }
+        .single-post__social-sharing {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .single-post__social-sharing__heading{
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        .single-post__date {
+        width: 30%;
+        margin-bottom: 20px;
+        }
+        .single-post__date::before{
+            display: none;
+        }
         .mt-4{
             margin-top: 40px;
            }
